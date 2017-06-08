@@ -3,17 +3,14 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = 'a7eb5018f08c4ed7ba128165ab132df8'; // Your client id
-var client_secret = '4d4f2e007279403cae3fb2464336496a'; // Your secret
-var redirect_uri = 'facebook.com'; // Your redirect uri
+var client_id = 'YOUR_CLIENT_ID_HERE'; // Your client id
+var client_secret = 'YOUR_CLIENT_SECRET_HERE'; // Your secret
+var redirect_uri = 'http://localhost:8888/callback/'; // Your redirect uri
 
 var app = express();
 
-/* app.use(express.static(__dirname + '../client/index.html'))
-   .use(cookieParser()); 
-   
 app.use(express.static(__dirname, { index: '../client/index.html' }))
-   .use(cookieParser());*/
+   .use(cookieParser());
 
 app.get('/', function (req, res) {
     res.render('index', {});
